@@ -16,7 +16,7 @@ page 50101 OrderPage
                 {
                     ApplicationArea = All;
                     TableRelation = Warehouse."Product Code";
-
+                    // Pole powinno pokazywać listę z nazwami produktów, a nie ich kodami
                     trigger OnValidate()
                     var
                         WarehouseRec: Record Warehouse;

@@ -55,8 +55,6 @@ page 50102 ReleasePage
                     if SelectedWarehouse."Stock Level" > 0 then begin
                         SelectedWarehouse.Modify(true);
                         Message('Releasing gone successful.');
-
-
                     end else begin
                         Message('You are trying to release more product then you have!');
                     end;

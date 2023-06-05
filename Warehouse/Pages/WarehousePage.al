@@ -6,6 +6,7 @@ page 50100 WarehouseManagementList
     UsageCategory = Lists;
     ApplicationArea = All;
     ModifyAllowed = false;
+    InsertAllowed = false;
     DeleteAllowed = true;
 
     layout

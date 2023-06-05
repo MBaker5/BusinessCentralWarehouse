@@ -7,6 +7,7 @@ table 50100 Warehouse
         field(1; "Product Code"; Code[20])
         {
             DataClassification = CustomerContent;
+            Caption = 'Product No.';
         }
 
         field(2; "Product Name"; Text[100])
@@ -28,4 +29,16 @@ table 50100 Warehouse
             Clustered = true;
         }
     }
+
+    //Trigger powinien wyłapać dodanie nowego produktu jednak nie robi tego
+    trigger OnInsert()
+    begin
+        Message('You added new product to warehouse!');
+    end;
+
+    trigger OnDelete()
+    begin
+        Message('You deleted product from warehouse!');
+    end;
+
 }

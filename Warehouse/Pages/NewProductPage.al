@@ -15,6 +15,7 @@ page 50103 NewProductPage
                 field("Product Code"; NewProductCode)
                 {
                     ApplicationArea = All;
+
                 }
                 field("Product Name"; NewProductName)
                 {
@@ -38,14 +39,12 @@ page 50103 NewProductPage
                 trigger OnAction()
                 var
                     WarehouseRec: Record Warehouse;
-
                 begin
 
                     WarehouseRec."Product Code" := NewProductCode;
                     WarehouseRec."Product Name" := NewProductName;
-                    WarehouseRec.Insert();
-                    Message('You added new product to list!');
-
+                    WarehouseRec.Insert(); // Trigger OnInsert tabeli warehouse nie wykrywa zdarzenia
+                    Message('Adding new product!');
                 end;
             }
         }
